@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// This is another comment
 public class CameraController {
 
     private const float padCenterDistance = 0.7f;
