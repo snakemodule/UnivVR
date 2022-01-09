@@ -1,0 +1,10 @@
+<LibraryView xmlns="MarkLight">
+  <UserInterface Id="LibraryUI" RenderMode="WorldSpace" Width="1440px" Height="1080px">
+    <ViewSwitcher Activated="onSwitcherActive" Id="libraryViewSwitcher"></ViewSwitcher>
+  </UserInterface>
+  <UserInterface Id="VisibilityUI" IsActive="True" RenderMode="WorldSpace" Width="1440px" Height="1080px">
+    <Region>
+      <VisibilityView Id="visibilityView"/>
+    </Region>
+  </UserInterface>
+</LibraryView>

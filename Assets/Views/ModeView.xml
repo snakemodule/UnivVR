@@ -1,0 +1,18 @@
+<ModeView xmlns="MarkLight">
+  <UserInterface Id="ModeUI" RenderMode="WorldSpace" Width="1440px" Height="1080px">
+    <Region Id="selectionRegion" Width="300" Height="300px" >
+      <Region Width="50%" Height="100%" Alignment="Left">
+        <Group>
+          <Button Id="ExploreModeButton" Text="Explore" Height="100" Width="100" Click="clickExplore"/>
+          <Label Text="Explore" FontColor="White" BackgroundColor="Black"/>
+        </Group>
+      </Region>
+      <Region Width="50%" Height="100%" Alignment="Right">
+        <Group>
+          <Button Id="TourModeButton" Text="Tours" Height="100" Width="100" Click="clickTours"/>
+          <Label Text="Tours" FontColor="White" BackgroundColor="Black"/>
+        </Group>
+      </Region>
+    </Region>
+  </UserInterface>
+</ModeView>

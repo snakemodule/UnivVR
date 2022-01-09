@@ -1,0 +1,5 @@
+<VisibilityPane xmlns="MarkLight" IsActive="False" Activated="onActive" Deactivated="onDeactive">
+    <Group Id="checkboxGroup" Orientation="Vertical" BackgroundColor="Grey">
+      <Label Id="label" Height="20"/>
+    </Group>
+</VisibilityPane>

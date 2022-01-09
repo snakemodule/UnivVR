@@ -1,0 +1,20 @@
+<VisibilityView xmlns="MarkLight">
+  <Group Id="outerGroup" Orientation="Horizontal">
+    <Group Id="organizer">
+    </Group>
+    <Group>
+      <Region Id="infoRegion" Width="200px" Height="425px" BackgroundColor="Yellow" IsActive="false">
+        <Region Height="75%" Width="100%" Alignment="Top" BackgroundColor="Grey">
+          <Region Height="100%" Width="100%" Alignment="Top" BackgroundColor="Black" Margin="5px,5px,5px,5px">
+            <Label Id="InfoText" Height="100%" Width="100%" HorizontalOverflow="Wrap"
+                   VerticalOverflow="Truncate" Alignment="Bottom" Text="Information will be displayed here."
+                   FontSize="14" FontColor="White" Margin="2px,2px,2px,2px"/>
+          </Region>
+        </Region>
+        <Region Height="25%" Width="100%" Alignment="Bottom" BackgroundColor="Grey">
+          <Button Width="33%" Text="Stop/Start" Alignment="Center" Click="onStopClick"/>
+        </Region>
+      </Region>
+    </Group>
+  </Group>
+</VisibilityView>

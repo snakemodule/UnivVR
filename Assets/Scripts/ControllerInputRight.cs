@@ -11,49 +11,30 @@ public class ControllerInputRight : MonoBehaviour {
         get { return SteamVR_Controller.Input((int)trackedObj.index); }
     }
 
-    CameraController CamController;
+    public CameraController CamController { get; private set; }
 
-    UniviewConnection conn;
+    public GameObject ViewPresenter;
 
     // Use this for initialization
     void Awake() {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
-        CamController = new CameraController(transform);
-        conn = UniviewConnection.Instance;
-    }
-
-    void Start()
-    {
-        CamController.init();
+        CamController = new CameraController(transform, GameObject.Find("CameraReference").GetComponent<CameraReference>());
     }
 	
 	// Update is called once per frame
 	void Update () {
         CamController.Input(Controller);
 
-        // 2
-        if (Controller.GetHairTriggerDown())
+        if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu))
         {
-            Debug.Log(gameObject.name + " Trigger Press");
+            if(ViewPresenter.activeSelf)
+            {
+                ViewPresenter.SetActive(false);
+            } else
+            {
+                ViewPresenter.SetActive(true);
+            }
         }
 
-        // 3
-        if (Controller.GetHairTriggerUp())
-        {
-            Debug.Log(gameObject.name + " Trigger Release");
-        }
-
-        // 4
-        if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Grip))
-        {
-            Debug.Log(gameObject.name + " Grip Press");
-            conn.sendCommand("earth.planetfx\n");
-        }
-
-        // 5
-        if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Grip))
-        {
-            Debug.Log(gameObject.name + " Grip Release");
-        }
     }
 }

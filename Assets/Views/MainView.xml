@@ -1,0 +1,7 @@
+<MainView xmlns="MarkLight">
+  <ViewSwitcher Id="mainViewSwitcher">
+    <ModeView Id="modeView"/>
+    <LibraryView Id="libraryView"/>
+    <TourView Id="tourView"/>
+  </ViewSwitcher>
+</MainView>

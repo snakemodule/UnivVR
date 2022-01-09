@@ -1,0 +1,4 @@
+<SwitcherButton Height="20px" Width="100%" xmlns="MarkLight" MouseEnter="MouseIn" MouseExit="MouseOut">
+    <Button Height="20px" Width="100%" Id="innerButton" Click="SwitchView"/>
+    <NavigatorPopup Id="navPopup"/>
+</SwitcherButton>

@@ -1,0 +1,26 @@
+<TourView xmlns="MarkLight">
+  <UserInterface Id="SelectionUI" RenderMode="WorldSpace" Width="1440px" Height="1080px">
+    <Region Id="selectionRegion" Width="300px" Height="300px" BackgroundColor="grey">
+      <Frame BackgroundColor="Black" Alignment="TopRight">
+        <Button Style="Close" Alignment="TopRight" Click="clickClose"/>
+      </Frame>
+    </Region>
+  </UserInterface>
+  <UserInterface Id="PlayerUI" RenderMode="WorldSpace" Width="1440px" Height="1080px" IsActive="false">
+    <Region Width="200px" Height="425px" BackgroundColor="Yellow">
+        <Region Height="75%" Width="100%" Alignment="Top" BackgroundColor="Grey">
+          <Region Height="100%" Width="100%" Alignment="Top" BackgroundColor="Black" Margin="5px,5px,5px,5px">
+            <Label Id="PlayerText" Height="100%" Width="100%" HorizontalOverflow="Wrap" 
+                   VerticalOverflow="Truncate" Alignment="Bottom" Text="Default Text" 
+                   FontSize="12" FontColor="White"/>
+          </Region>
+        </Region>
+        <Region Height="25%" Width="100%" Alignment="Bottom" BackgroundColor="Grey">
+            <Button Id="closeButton" Style="Close" Alignment="TopRight" Click="cancelTour" />
+            <Button Width="33%" Text="back" Alignment="Left" Click="stepBackward"/>
+            <Button Width="33%" Text="pause" Alignment="Center" Click="pauseButton"/>
+            <Button Width="33%" Text="forward" Alignment="Right" Click="stepForward"/>
+        </Region>
+    </Region>
+  </UserInterface>
+</TourView>

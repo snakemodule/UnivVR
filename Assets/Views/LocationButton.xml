@@ -1,0 +1,4 @@
+<LocationButton Height="20px" Width="100%" xmlns="MarkLight" MouseEnter="MouseIn" MouseExit="MouseOut">
+  <Button Style="Location" Height="20px" Width="100%" Id="innerButton" Click="onClick"/>
+  <NavigatorPopup Id="navPopup"/>
+</LocationButton>

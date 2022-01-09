@@ -1,0 +1,6 @@
+<TourButton xmlns="MarkLight">
+  <Group>
+    <Button Height="40" Width="40" Id="innerButton" Click="onClick"/>
+    <Label Id ="title" BackgroundColor="Black"/>
+  </Group>
+</TourButton>

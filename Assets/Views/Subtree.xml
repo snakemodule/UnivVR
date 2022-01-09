@@ -1,0 +1,8 @@
+<Subtree Orientation="Vertical" xmlns="MarkLight">
+    <Frame MouseEnter="MouseIn" MouseExit="MouseOut" Height="20px" Width="100%" Alignment="TopRight">
+      <NavigatorPopup Id="navPopup"/>
+      <Button Style="TreeListButtonClosed" Height="20px" Width="100%" Id="innerButton" Click="OnClick"/>
+    </Frame>
+    <Group Spacing="5px" Id="SubItemGroup" IsActive="False" Width="75%" Orientation="Vertical" Alignment="TopRight">
+    </Group>
+</Subtree>

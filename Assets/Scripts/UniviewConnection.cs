@@ -5,8 +5,6 @@ using UnityEngine;
 using System.Net;
 using System.Net.Sockets;
 
-
-
 public class UniviewConnection
 {
     private static UniviewConnection instance;
@@ -34,9 +32,6 @@ public class UniviewConnection
         System.Net.IPEndPoint remoteEndPoint = new IPEndPoint(ipAddress, 22000);
         socket.Connect(remoteEndPoint);
         byte[] data = new byte[50];
-        //socket.Receive(data);
-        //String recv = System.Text.Encoding.Default.GetString(data);
-        //Debug.Log(recv);
     }
 
     public void sendCommand(String command)
@@ -48,9 +43,31 @@ public class UniviewConnection
         }
         catch (SocketException se)
         {
-
+            Debug.LogError(se.Message);
         }
     }
+
+    public IEnumerator sendCommandInterruptInterpolation(String command)
+    {
+        using (WWW www = new WWW("http://127.0.0.1:20080/api/camera/interpolating"))
+        {
+            while(!www.isDone)
+            {
+                yield return null;
+            }
+            string[] tokens = www.text.Split(' ');
+            for (int i = 0; i < tokens.Length; i++)
+            {
+                if (tokens[i] == "true")
+                {
+                    sendCommand("camera.finishtransition\nsystem.timed 3.5 "+command);
+                    yield break;
+                }
+            }
+            sendCommand(command);
+        }
+    }
+
 
 }
 

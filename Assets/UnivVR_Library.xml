@@ -1,0 +1,611 @@
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SomeLibrary.xsd">
+    <!-- Add the functionality to put more than one pane inside a visibility class. --> 
+    
+    <Library>
+        <LibraryList> <!--Solar System-->
+            <ButtonInformation>
+                <Label>Solar System</Label>
+                <FlyTo Enabled="true">camera.flyto target='Solarsystem'</FlyTo>
+                <JumpTo Enabled="true">camera.jumpto Solarsystem</JumpTo>
+                <Target Enabled="true">camera.setpivot Solarsystem</Target>
+                <Surface Enabled="false"></Surface>
+                <Soundfile Enabled="false"></Soundfile>
+                <InfoText Enabled="false"></InfoText>
+                <ButtonVisID>asteroidvisuals</ButtonVisID>
+                <ButtonVisID>suneffects</ButtonVisID>
+                <ButtonVisID>solarsystemeffects</ButtonVisID>
+                <ButtonVisID>constellations</ButtonVisID>
+            </ButtonInformation>
+            <Content>
+                <TreeList> <!--Planets-->
+                    <ButtonInformation>
+                        <Label>Planets</Label>
+                        <FlyTo Enabled="true">camera.flyto target='planets'</FlyTo>
+                        <JumpTo Enabled="true">camera.jumpto planets</JumpTo>
+                        <Target Enabled="true">camera.setpivot planets</Target>
+                        <Surface Enabled="false"></Surface>
+                        <Soundfile Enabled="false"></Soundfile>
+                        <InfoText Enabled="false"></InfoText>
+                    </ButtonInformation>
+                    <Content>
+                        <Location> <!--Mercury-->
+                            <ButtonInformation>
+                                <Label>Mercury</Label>
+                                <FlyTo Enabled="true">camera.flyto target='Mercury'</FlyTo>
+                                <JumpTo Enabled="true">camera.jumpto Mercury</JumpTo>
+                                <Target Enabled="true">camera.setpivot Mercury</Target>
+                                <Surface Enabled="true">gui.library run_action path=user/Custom%20Events/UnivVR/ToSurface_Mercury.customevent action=run</Surface>
+                                <Soundfile Enabled="true">mercury_clip</Soundfile>
+                                <InfoText Enabled="true">Mercury is the smallest and innermost planet in the Solar System. Its orbital period around the Sun of 87.97 days is the shortest of all the planets in the Solar System. It is named after the Roman deity Mercury, the messenger of the gods.</InfoText>
+                            </ButtonInformation>
+                        </Location>
+                        <Location> <!--Venus-->
+                            <ButtonInformation>
+                                <Label>Venus</Label>
+                                <FlyTo Enabled="true">camera.flyto target='Venus'</FlyTo>
+                                <JumpTo Enabled="true">camera.jumpto Venus</JumpTo>
+                                <Target Enabled="true">camera.setpivot Venus</Target>
+                                <Surface Enabled="true">gui.library run_action path=user/Custom%20Events/UnivVR/ToSurface_Venus.customevent action=run</Surface>
+                                <Soundfile Enabled="true">venus_clip</Soundfile>
+                                <InfoText Enabled="true">Venus is the second planet from the Sun, orbiting it every 224.7 Earth days. It has the longest rotation period (243 days) of any planet in the Solar System and rotates in the opposite direction to most other planets (meaning the Sun would rise in the west and set in the east). It does not have any natural satellites. It is named after the Roman goddess of love and beauty.</InfoText>
+                            </ButtonInformation>
+                        </Location>
+                        <TreeListButton> <!--Earth-->
+                            <ButtonInformation>
+                                <Label>Earth</Label>
+                                <FlyTo Enabled="true">camera.flyto target='Earth'</FlyTo>
+                                <JumpTo Enabled="true">camera.jumpto Earth</JumpTo>
+                                <Target Enabled="true">camera.setpivot Earth</Target>
+                                <Surface Enabled="true">gui.library run_action path=user/Custom%20Events/UnivVR/ToSurface_Earth.customevent action=run</Surface>
+                                <Soundfile Enabled="true">earth_clip</Soundfile>
+                                <InfoText Enabled="true">Earth is the third planet from the Sun and the only object in the Universe known to harbor life. According to radiometric dating and other sources of evidence, Earth formed over 4.5 billion years ago. Earth's gravity interacts with other objects in space, especially the Sun and the Moon, Earth's only natural satellite. Earth revolves around the Sun in 365.26 days, a period known as an Earth year. During this time, Earth rotates about its axis about 366.26 times</InfoText>
+                                <ButtonVisID>earthmagnet</ButtonVisID>
+                            </ButtonInformation>
+                            <Content>
+                                <Location>
+                                    <ButtonInformation>
+                                        <Label>Moon</Label>
+                                        <FlyTo Enabled="true">camera.flyto target='Moon'</FlyTo>
+                                        <JumpTo Enabled="true">camera.jumpto Moon</JumpTo>
+                                        <Target Enabled="true">camera.setpivot Moon</Target>
+                                        <Surface Enabled="true">gui.library run_action path=user/Custom%20Events/UnivVR/ToSurface_Moon.customevent action=run</Surface>
+                                        <Soundfile Enabled="false"></Soundfile>
+                                        <InfoText Enabled="false"></InfoText>
+                                    </ButtonInformation>
+                                </Location>
+                            </Content>
+                        </TreeListButton>
+                        <TreeListButton> <!--Mars-->
+                            <ButtonInformation>
+                                <Label>Mars</Label>
+                                <FlyTo Enabled="true">camera.flyto target='Mars'</FlyTo>
+                                <JumpTo Enabled="true">camera.jumpto Mars</JumpTo>
+                                <Target Enabled="true">camera.setpivot Mars</Target>
+                                <Surface Enabled="true">gui.library run_action path=user/Custom%20Events/UnivVR/ToSurface_Mars.customevent action=run</Surface>
+                                <Soundfile Enabled="true">mars_clip</Soundfile>
+                                <InfoText Enabled="true">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the 'Red Planet' because the reddish iron oxide prevalent on its surface gives it a reddish appearance that is distinctive among the astronomical bodies visible to the naked eye. Mars is a terrestrial planet with a thin atmosphere, having surface features reminiscent both of the impact craters of the Moon and the valleys, deserts, and polar ice caps of Earth.</InfoText>
+                                <ButtonVisID>marslandermarkers</ButtonVisID>
+                            </ButtonInformation>
+                            <Content>
+                                <Subtree>
+                                    <ButtonInformation>
+                                        <Label>Moons</Label>
+                                        <FlyTo Enabled="true">camera.flyto target='marsmoons'</FlyTo>
+                                        <JumpTo Enabled="true">camera.jumpto marsmoons</JumpTo>
+                                        <Target Enabled="true">camera.setpivot marsmoons</Target>
+                                        <Surface Enabled="false"></Surface>
+                                        <Soundfile Enabled="false"></Soundfile>
+                                        <InfoText Enabled="false"></InfoText>
+                                    </ButtonInformation>
+                                    <SubtreeContent>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Phobos</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Phobos'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Phobos</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Phobos</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Deimos</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Deimos'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Deimos</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Deimos</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                    </SubtreeContent>
+                                </Subtree>
+                                <Location>
+                                    <ButtonInformation>
+                                        <Label>Curiosity Panorama</Label>
+                                        <FlyTo Enabled="true">camera.flyto target='curiosityPanorama'</FlyTo>
+                                        <JumpTo Enabled="true">camera.jumpto curiosityPanorama</JumpTo>
+                                        <Target Enabled="true">camera.setpivot curiosityPanorama</Target>
+                                        <Surface Enabled="false"></Surface>
+                                        <Soundfile Enabled="false"></Soundfile>
+                                        <InfoText Enabled="false"></InfoText>
+                                    </ButtonInformation>
+                                </Location>
+                            </Content>
+                        </TreeListButton>
+                        <TreeListButton> <!--Jupiter-->
+                            <ButtonInformation>
+                                <Label>Jupiter</Label>
+                                <FlyTo Enabled="true">camera.flyto target='Jupiter'</FlyTo>
+                                <JumpTo Enabled="true">camera.jumpto Jupiter</JumpTo>
+                                <Target Enabled="true">camera.setpivot Jupiter</Target>
+                                <Surface Enabled="false"></Surface>
+                                <Soundfile Enabled="false"></Soundfile>
+                                <InfoText Enabled="false"></InfoText>
+                            </ButtonInformation>
+                            <Content>
+                                <Subtree>
+                                    <ButtonInformation>
+                                        <Label>Inner Moons</Label>
+                                        <FlyTo Enabled="true">camera.flyto target='jupiterinnermoons'</FlyTo>
+                                        <JumpTo Enabled="true">camera.jumpto jupiterinnermoons</JumpTo>
+                                        <Target Enabled="true">camera.setpivot jupiterinnermoons</Target>
+                                        <Surface Enabled="false"></Surface>
+                                        <Soundfile Enabled="false"></Soundfile>
+                                        <InfoText Enabled="false"></InfoText>
+                                    </ButtonInformation>
+                                    <SubtreeContent>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Metis</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Metis'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Metis</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Metis</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Adrastea</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Adrastea'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Adrastea</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Adrastea</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Amalthea</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Amalthea'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Amalthea</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Amalthea</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Thebe</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Thebe'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Thebe</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Thebe</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                    </SubtreeContent>
+                                </Subtree>
+                                <Subtree>
+                                    <ButtonInformation>
+                                        <Label>Galilean Moons</Label>
+                                        <FlyTo Enabled="true">camera.flyto target='jupitergalileanmoons'</FlyTo>
+                                        <JumpTo Enabled="true">camera.jumpto jupitergalileanmoons</JumpTo>
+                                        <Target Enabled="true">camera.setpivot jupitergalileanmoons</Target>
+                                        <Surface Enabled="false"></Surface>
+                                        <Soundfile Enabled="false"></Soundfile>
+                                        <InfoText Enabled="false"></InfoText>
+                                    </ButtonInformation>
+                                    <SubtreeContent>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Io</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Io'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Io</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Io</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Europa</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Europa'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Europa</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Europa</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Ganymede</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Ganymede'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Ganymede</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Ganymede</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                        <Location>
+                                            <ButtonInformation>
+                                                <Label>Callisto</Label>
+                                                <FlyTo Enabled="true">camera.flyto target='Callisto'</FlyTo>
+                                                <JumpTo Enabled="true">camera.jumpto Callisto</JumpTo>
+                                                <Target Enabled="true">camera.setpivot Callisto</Target>
+                                                <Surface Enabled="false"></Surface>
+                                                <Soundfile Enabled="false"></Soundfile>
+                                                <InfoText Enabled="false"></InfoText>
+                                            </ButtonInformation>
+                                        </Location>
+                                    </SubtreeContent>
+                                </Subtree>
+                                <!-- A Catalog is required for Jupiters Outer Moons, as it is a deeper structure than what Subtree nodes support.-->
+                            </Content>
+                        </TreeListButton>
+                        <TreeListButton> <!--Saturn-->
+                            <ButtonInformation>
+                                <Label>Saturn</Label>
+                                <FlyTo Enabled="true">camera.flyto target='Saturn'</FlyTo>
+                                <JumpTo Enabled="true">camera.jumpto Saturn</JumpTo>
+                                <Target Enabled="true">camera.setpivot Saturn</Target>
+                                <Surface Enabled="false"></Surface>
+                                <Soundfile Enabled="false"></Soundfile>
+                                <InfoText Enabled="false"></InfoText>
+                                <ButtonVisID>saturnrings</ButtonVisID>
+                            </ButtonInformation>
+                            <Content>
+                                <Location>
+                                    <ButtonInformation>
+                                        <Label>Rings</Label>
+                                        <FlyTo Enabled="true">camera.flyto target='SaturnRings'</FlyTo>
+                                        <JumpTo Enabled="true">camera.jumpto SaturnRings</JumpTo>
+                                        <Target Enabled="true">camera.setpivot SaturnRings</Target>
+                                        <Surface Enabled="false"></Surface>
+                                        <Soundfile Enabled="false"></Soundfile>
+                                        <InfoText Enabled="false"></InfoText>
+                                    </ButtonInformation>
+                                </Location>
+                                <!-- A Catalog is required for Saturns Moons, as it is a deeper structure than what TreeListButton nodes support.-->
+                            </Content>
+                        </TreeListButton>
+                        <Location> <!--Uranus-->
+							<ButtonInformation>
+								<Label>Uranus</Label>
+                                <FlyTo Enabled="true">camera.flyto target='Uranus'</FlyTo>
+                                <JumpTo Enabled="true">camera.jumpto Uranus</JumpTo>
+                                <Target Enabled="true">camera.setpivot Uranus</Target>
+                                <Surface Enabled="false"></Surface>
+                                <Soundfile Enabled="false"></Soundfile>
+                                <InfoText Enabled="false"></InfoText>
+							</ButtonInformation>
+						</Location>
+                        <Location> <!--Neptune-->
+                            <ButtonInformation>
+								<Label>Neptune</Label>
+                                <FlyTo Enabled="true">camera.flyto target='Neptune'</FlyTo>
+                                <JumpTo Enabled="true">camera.jumpto Neptune</JumpTo>
+                                <Target Enabled="true">camera.setpivot Neptune</Target>
+                                <Surface Enabled="false"></Surface>
+                                <Soundfile Enabled="false"></Soundfile>
+                                <InfoText Enabled="false"></InfoText>
+							</ButtonInformation>
+                        </Location>
+						<TreeListButton> <!--Dwarf Planets-->
+							<ButtonInformation>
+								<Label>Dwarf Planets</Label>
+								<FlyTo Enabled="false"></FlyTo>
+								<JumpTo Enabled="false"></JumpTo>
+								<Target Enabled="false"></Target>
+								<Surface Enabled="false"></Surface>
+								<Soundfile Enabled="false"></Soundfile>
+								<InfoText Enabled="false"></InfoText>
+							</ButtonInformation>
+							<Content>
+								<Location>
+									<ButtonInformation>
+										<Label>Pluto</Label>
+										<FlyTo Enabled="true">camera.flyto target='Pluto'</FlyTo>
+										<JumpTo Enabled="true">camera.jumpto Pluto</JumpTo>
+										<Target Enabled="true">camera.setpivot Pluto</Target>
+										<Surface Enabled="false"></Surface>
+										<Soundfile Enabled="false"></Soundfile>
+										<InfoText Enabled="false"></InfoText>
+									</ButtonInformation>
+								</Location>
+							</Content>
+						</TreeListButton>
+                    </Content>
+                </TreeList>
+                <Location> <!--Sun-->
+                    <ButtonInformation>
+                        <Label>Sun</Label>
+                        <FlyTo Enabled="true">camera.flyto target='SunSurface'</FlyTo>
+                        <JumpTo Enabled="true">camera.jumpto SunSurface</JumpTo>
+                        <Target Enabled="true">camera.setpivot SunSurface</Target>
+                        <Surface Enabled="false"></Surface>
+                        <Soundfile Enabled="false"></Soundfile>
+                        <InfoText Enabled="false"></InfoText>
+                        <ButtonVisID>suneffects</ButtonVisID>
+                    </ButtonInformation>
+                </Location>
+				<TreeList> <!--Satellites-->
+					<ButtonInformation>
+						<Label>Satellites</Label>
+                        <FlyTo Enabled="false"></FlyTo>
+                        <JumpTo Enabled="false"></JumpTo>
+                        <Target Enabled="false"></Target>
+                        <Surface Enabled="false"></Surface>
+                        <Soundfile Enabled="false"></Soundfile>
+                        <InfoText Enabled="false"></InfoText>
+					</ButtonInformation>
+					<Content>
+						<Location> <!--ISS-->
+							<ButtonInformation>
+								<Label>ISS</Label>
+								<FlyTo Enabled="true">camera.flyto target='ISS'</FlyTo>
+								<JumpTo Enabled="true">camera.jumpto ISS</JumpTo>
+								<Target Enabled="true">camera.setpivot ISS</Target>
+								<Surface Enabled="false"></Surface>
+								<Soundfile Enabled="false"></Soundfile>
+								<InfoText Enabled="false"></InfoText>
+							</ButtonInformation>
+						</Location>
+						<Location> <!--Voyagers-->
+							<ButtonInformation>
+								<Label>Voyager 1 and 2</Label>
+								<FlyTo Enabled="true">camera.flyto target='voyagers'</FlyTo>
+								<JumpTo Enabled="true">camera.jumpto voyagers</JumpTo>
+								<Target Enabled="true">camera.setpivot voyagers</Target>
+								<Surface Enabled="false"></Surface>
+								<Soundfile Enabled="false"></Soundfile>
+								<InfoText Enabled="false"></InfoText>
+							</ButtonInformation>
+						</Location>
+						<Location> <!--Pioneers-->
+							<ButtonInformation>
+								<Label>Pioneer 10 and 11</Label>
+								<FlyTo Enabled="true">camera.flyto target='pioneers'</FlyTo>
+								<JumpTo Enabled="true">camera.jumpto pioneers</JumpTo>
+								<Target Enabled="true">camera.setpivot pioneers</Target>
+								<Surface Enabled="false"></Surface>
+								<Soundfile Enabled="false"></Soundfile>
+								<InfoText Enabled="false"></InfoText>
+							</ButtonInformation>
+						</Location>
+						<Location> <!--Cassini-->
+							<ButtonInformation>
+								<Label>Cassini</Label>
+								<FlyTo Enabled="true">camera.flyto target='Cassini'</FlyTo>
+								<JumpTo Enabled="true">camera.jumpto Cassini</JumpTo>
+								<Target Enabled="true">camera.setpivot Cassini</Target>
+								<Surface Enabled="false"></Surface>
+								<Soundfile Enabled="false"></Soundfile>
+								<InfoText Enabled="false"></InfoText>
+							</ButtonInformation>
+						</Location>
+					</Content>
+				</TreeList>
+            </Content>
+        </LibraryList>
+    </Library>
+    
+    <VisibilityClasses>
+        <VisibilityClass>
+            <VisID>solarsystemeffects</VisID>
+            <PaneLabel>Solar System Effects</PaneLabel>
+            <CheckboxOption OptionLabel="Oort Cloud" CheckCommand="OortCloud.on" UncheckCommand="OortCloud.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Kuiper Belt" CheckCommand="Kuiper Belt.on" UncheckCommand="Kuiper Belt.off" CheckedByDefault="false"/>
+        </VisibilityClass>
+        <VisibilityClass>
+            <VisID>constellations</VisID>
+            <PaneLabel>Star Constellations</PaneLabel>
+            <CheckboxOption OptionLabel="Enabled" CheckCommand="contellations.on" UncheckCommand="constellations.off" CheckedByDefault="false"/>
+        </VisibilityClass>
+		<VisibilityClass>
+            <VisID>iss</VisID>
+            <PaneLabel>International Space Station</PaneLabel>
+            <CheckboxOption OptionLabel="Enabled" CheckCommand="ISS.on" UncheckCommand="ISS.off" CheckedByDefault="true"/>
+        </VisibilityClass>
+		<VisibilityClass>
+            <VisID>voyagers</VisID>
+            <PaneLabel>Voyager 1 and 2 Satellites</PaneLabel>
+            <CheckboxOption OptionLabel="Enabled" CheckCommand="voyagers.on" UncheckCommand="voyagers.off" CheckedByDefault="true"/>
+        </VisibilityClass>
+		<VisibilityClass>
+            <VisID>pioneers</VisID>
+            <PaneLabel>Pioneer 10 and 11</PaneLabel>
+            <CheckboxOption OptionLabel="Enabled" CheckCommand="pioneers.on" UncheckCommand="pioneers.off" CheckedByDefault="true"/>
+        </VisibilityClass>
+		<VisibilityClass>
+            <VisID>cassini</VisID>
+            <PaneLabel>Cassini</PaneLabel>
+            <CheckboxOption OptionLabel="Enabled" CheckCommand="Cassini.on" UncheckCommand="Cassini.off" CheckedByDefault="true"/>
+        </VisibilityClass>
+		<VisibilityClass>
+			<VisID>earthsatellites</VisID>
+            <PaneLabel>Satellites</PaneLabel>
+            <CheckboxOption OptionLabel="ISS" CheckCommand="ISS.on" UncheckCommand="ISS.off" CheckedByDefault="true"/>			
+            <CheckboxOption OptionLabel="Voyager Satellites" CheckCommand="voyagers.on" UncheckCommand="voyagers.off" CheckedByDefault="true"/>			
+            <CheckboxOption OptionLabel="Pioneers Satellites" CheckCommand="pioneers.on" UncheckCommand="pioneers.off" CheckedByDefault="true"/>
+		</VisibilityClass>
+        <VisibilityClass>
+            <VisID>earthmagnet</VisID>
+            <PaneLabel>Earth Magnetism</PaneLabel>
+            <CheckboxOption OptionLabel="Magneto Sphere" CheckCommand="Magneto.on" UncheckCommand="Magneto.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Magneto Bow Shock" CheckCommand="BowShock.on" UncheckCommand="BowShock.off" CheckedByDefault="false"/>
+        </VisibilityClass>
+        <VisibilityClass>
+            <VisID>lunarshadow</VisID>
+            <PaneLabel>Lunar Shadow</PaneLabel>
+            <CheckboxOption OptionLabel="Lunar Shadow Diagram" CheckCommand="LunarShadowDiagram.on" UncheckCommand="LunarShadowDiagram.off" CheckedByDefault="false"/>
+        </VisibilityClass>
+        <VisibilityClass>
+            <VisID>marslandermarkers</VisID>
+            <PaneLabel>Lander Markers</PaneLabel>
+            <CheckboxOption OptionLabel="All Markers" CheckCommand="markers.on" UncheckCommand="markers.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Curiosity" CheckCommand="curiosityMarker.on" UncheckCommand="curiosityMarker.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Opportunity" CheckCommand="opportunityMarker.on" UncheckCommand="opportunityMarker.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Pathfinder" CheckCommand="pathfinderMarker.on" UncheckCommand="pathfinderMarker.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Spirit" CheckCommand="spiritMarker.on" UncheckCommand="spiritMarker.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Viking 1" CheckCommand="viking1Marker.on" UncheckCommand="viking1Marker.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Viking 2" CheckCommand="viking2Marker.on" UncheckCommand="viking2Marker.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Polar Lander" CheckCommand="polarlanderMarker.on" UncheckCommand="polarlanderMarker.off" CheckedByDefault="false"/>
+        </VisibilityClass>
+        <VisibilityClass>
+            <VisID>saturnrings</VisID>
+            <PaneLabel>Saturn Rings</PaneLabel>
+            <CheckboxOption OptionLabel="Rings" CheckCommand="SaturnRings.on" UncheckCommand="SaturnRings.off" CheckedByDefault="true"/>
+        </VisibilityClass>
+        <VisibilityClass>
+            <VisID>suneffects</VisID>
+            <PaneLabel>Sun Effects</PaneLabel>
+            <CheckboxOption OptionLabel="Glare Effect" CheckCommand="SunGlare.on" UncheckCommand="SunGlare.off" CheckedByDefault="true"/>
+            <CheckboxOption OptionLabel="Solar System Glow" CheckCommand="Sun1.on" UncheckCommand="Sun1.off" CheckedByDefault="true"/>
+        </VisibilityClass>
+        <VisibilityClass>
+            <VisID>asteroidvisuals</VisID>
+            <PaneLabel>Asteroids</PaneLabel>
+            <CheckboxOption OptionLabel="Near Earth Asteroids" CheckCommand="NearEarthAsteroids.on" UncheckCommand="NearEarthAsteroids.off" CheckedByDefault="false"/>
+            <CheckboxOption OptionLabel="Potentially Hazardous&#xA;Asteroids" CheckCommand="PotentiallyHazardousAsteroids.on" UncheckCommand="PotentiallyHazardousAsteroids.off" CheckedByDefault="false" InfoText="A potentially hazardous object is a near-Earth object – either an asteroid or a comet – with an orbit such that it has the potential to make exceptionally close approaches to the Earth and is of a size large enough to cause significant regional damage in the event of impact." InfoClip="hazard_clip"/>
+        </VisibilityClass>
+    </VisibilityClasses>
+    
+    <!--
+    Templates:
+    
+    <LibraryList>
+        <ButtonInformation>
+            <Label></Label>
+            <FlyTo Enabled=""></FlyTo>
+            <JumpTo Enabled=""></JumpTo>
+            <Target Enabled=""></Target>
+            <Surface Enabled=""></Surface>
+            <Soundfile Enabled="false"></Soundfile>
+            <InfoText Enabled="false"></InfoText>
+            <ButtonVisID></ButtonVisID>
+        </ButtonInformation>
+        <Content/>
+    </LibraryList>
+    
+    <TreeList>
+        <ButtonInformation>
+            <Label></Label>
+            <FlyTo Enabled=""></FlyTo>
+            <JumpTo Enabled=""></JumpTo>
+            <Target Enabled=""></Target>
+            <Surface Enabled=""></Surface>
+            <Soundfile Enabled="false"></Soundfile>
+            <InfoText Enabled="false"></InfoText>
+            <ButtonVisID></ButtonVisID>
+        </ButtonInformation>
+        <Content/>
+    </TreeList>
+    
+    <TreeListButton>
+        <ButtonInformation>
+            <Label></Label>
+            <FlyTo Enabled=""></FlyTo>
+            <JumpTo Enabled=""></JumpTo>
+            <Target Enabled=""></Target>
+            <Surface Enabled=""></Surface>
+            <Soundfile Enabled="false"></Soundfile>
+            <InfoText Enabled="false"></InfoText>
+            <ButtonVisID></ButtonVisID>
+        </ButtonInformation>
+        <Content/>
+    </TreeListButton>
+    
+    <Location>
+        <ButtonInformation>
+            <Label></Label>
+            <FlyTo Enabled=""></FlyTo>
+            <JumpTo Enabled=""></JumpTo>
+            <Target Enabled=""></Target>
+            <Surface Enabled=""></Surface>
+            <Soundfile Enabled="false"></Soundfile>
+            <InfoText Enabled="false"></InfoText>
+            <ButtonVisID></ButtonVisID>
+        </ButtonInformation>
+    </Location>
+    
+    <Subtree>
+        <ButtonInformation>
+            <Label></Label>
+            <FlyTo Enabled=""></FlyTo>
+            <JumpTo Enabled=""></JumpTo>
+            <Target Enabled=""></Target>
+            <Surface Enabled=""></Surface>
+            <Soundfile Enabled="false"></Soundfile>
+            <InfoText Enabled="false"></InfoText>
+            <ButtonVisID></ButtonVisID>
+        </ButtonInformation>
+        <SubtreeContent/>
+    </Subtree>
+    
+    <Catalog>
+        <ButtonInformation>
+            <Label></Label>
+            <FlyTo Enabled=""></FlyTo>
+            <JumpTo Enabled=""></JumpTo>
+            <Target Enabled=""></Target>
+            <Surface Enabled=""></Surface>
+            <Soundfile Enabled="false"></Soundfile>
+            <InfoText Enabled="false"></InfoText>
+            <ButtonVisID></ButtonVisID>
+        </ButtonInformation>
+        <Content/>
+    </Catalog>
+    
+    <ExpandableNode>
+        <ButtonInformation>
+            <Label></Label>
+            <FlyTo Enabled=""></FlyTo>
+            <JumpTo Enabled=""></JumpTo>
+            <Target Enabled=""></Target>
+            <Surface Enabled=""></Surface>
+            <Soundfile Enabled="false"></Soundfile>
+            <InfoText Enabled="false"></InfoText>
+        </ButtonInformation>
+        <Content/>
+    </ExpandableNode>
+    
+    <EndNode>
+        <ButtonInformation>
+            <Label>Tenth Button</Label>
+            <FlyTo Enabled="true">Flytocommand</FlyTo>
+            <JumpTo Enabled="true">Jumptocommand</JumpTo>
+            <Target Enabled="true">Targetcommand</Target>
+            <Surface Enabled="true">Surfacecommand</Surface>
+            <Soundfile Enabled="false"></Soundfile>
+            <InfoText Enabled="false"></InfoText>
+        </ButtonInformation>
+    </EndNode>
+    
+    <VisibilityClass>
+        <VisID></VisID>
+        <PaneLabel></PaneLabel>
+        <CheckboxOption OptionLabel="" CheckCommand="" UncheckCommand=""/> 
+    </VisibilityClass>
+    -->
+</Root>

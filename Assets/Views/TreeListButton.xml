@@ -1,0 +1,8 @@
+<TreeListButton Orientation="Vertical" xmlns="MarkLight">
+    <Frame Id="buttonFrame" MouseEnter="MouseIn" MouseExit="MouseOut" Height="20px" Width="100%">
+      <Button Style="TreeListButtonClosed" Height="20px" Width="100%" Id="innerButton" Click="OnClick"/>
+      <NavigatorPopup Id="navPopup"/>
+    </Frame>
+    <Group Spacing="5px" Id="SubItemGroup" IsActive="False" Width="75%" Orientation="Vertical" Alignment="TopRight">
+    </Group>
+</TreeListButton>

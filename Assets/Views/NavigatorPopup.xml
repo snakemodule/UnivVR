@@ -1,0 +1,17 @@
+<NavigatorPopup xmlns="MarkLight" OverrideSorting="True" IsActive="false" SortingOrder="5" WindowRegion.IsActive="True" Width="90" RenderMode="WorldSpace" Alignment="Left">  
+  <Region Id="WindowRegion">
+    <Group Orientation="Horizontal" Offset="0,0,0,0">
+      <Image Style="navPopupLine" Alignment="Left" Height="90" Width="10"/>
+      <Group Alignment="Left">
+        <Button Id="flytoButton" Style="flyto" Width="30px" Height="30px" Click="clickFlyTo"/>
+        <Button Id="jumptoButton" Style="jumpto" Width="30px" Height="30px" Click="clickJumpTo"/>
+        <Button Id="targetButton" Style="target" Width="30px" Height="30px" Click="clickTarget"/>
+      </Group>
+      <Group Alignment="Left">
+        <Button Id="surfaceButton" Style="surface" Alignment="Left" Width="30px" Height="30px" Click="clickSurface"/>
+      </Group>
+    </Group>
+  </Region>
+</NavigatorPopup>
+
+

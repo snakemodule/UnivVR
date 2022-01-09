@@ -1,0 +1,13 @@
+<LibraryPane xmlns="MarkLight">
+  <Group BackgroundColor="grey" Width="180px" Orientation="Vertical">
+    <Region Height="60px">
+      <Label Text="Library"/>
+      <Frame BackgroundColor="Black" Alignment="TopRight">
+        <Button Style="Close" Click="clickClose"/>
+      </Frame>
+    </Region>
+    <Group Id="organizer" Orientation="Vertical">
+      <Button Style ="Back" Id="backbutton" Click="Back" Alignment="Left"/>
+    </Group>
+  </Group>
+</LibraryPane>

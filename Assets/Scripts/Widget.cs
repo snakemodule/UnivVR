@@ -8,6 +8,9 @@ public class Widget : MonoBehaviour
     public GameObject Controller;
     public bool fixedPos;
 
+    enum mode { none, rotate, translate, roll, pan };
+    mode currentMode = mode.none;
+
     // Use this for initialization
     void Start()
     {
@@ -22,6 +25,14 @@ public class Widget : MonoBehaviour
             transform.position = Controller.transform.position - new Vector3(0.08f, 0, 0);
         }
 
+    }
+
+    public void setTransparent()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            transparentChildIndex(i);
+        }
     }
 
     public void rotateMode()
@@ -64,75 +75,90 @@ public class Widget : MonoBehaviour
         transform.GetChild(5).gameObject.SetActive(true);
     }
 
+    public void hide()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(2).gameObject.SetActive(false);
+        transform.GetChild(3).gameObject.SetActive(false);
+        transform.GetChild(4).gameObject.SetActive(false);
+        transform.GetChild(5).gameObject.SetActive(false);
+    }
+
     public void highlightLeft()
     {
-        highlightIndex(0);
+        highlightChildIndex(0);
     }
 
     public void highlightRight()
     {
-        highlightIndex(1);
+        highlightChildIndex(1);
     }
 
     public void highlightUp()
     {
-        highlightIndex(2);
+        highlightChildIndex(2);
     }
 
     public void highlightDown()
     {
-        highlightIndex(3);
+        highlightChildIndex(3);
     }
 
     public void highlightForward()
     {
-        highlightIndex(4);
+        highlightChildIndex(4);
     }
 
     public void highlightBackward()
     {
-        highlightIndex(5);
+        highlightChildIndex(5);
     }
 
     public void offColorLeft()
     {
-        offColorIndex(0);
+        offColorChildIndex(0);
     }
 
     public void offColorRight()
     {
-        offColorIndex(1);
+        offColorChildIndex(1);
     }
 
     public void offColorUp()
     {
-        offColorIndex(2);
+        offColorChildIndex(2);
     }
 
     public void offColorDown()
     {
-        offColorIndex(3);
+        offColorChildIndex(3);
     }
 
     public void offColorForward()
     {
-        offColorIndex(4);
+        offColorChildIndex(4);
     }
 
     public void offColorBackward()
     {
-        offColorIndex(5);
+        offColorChildIndex(5);
     }
 
-    private void highlightIndex(int index)
+    private void highlightChildIndex(int index)
     {
         transform.GetChild(index).GetChild(0).gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
-        //GameObject.Find("Sphere").GetComponent<Renderer>().material.SetColor("_Color", Color.green);
     }
 
-    private void offColorIndex(int index)
+    private void offColorChildIndex(int index)
     {
         transform.GetChild(index).GetChild(0).gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
+    }
+
+    private void transparentChildIndex(int index)
+    {
+        Color transparentBlue = new Color(0, 0, 1, 0.5f);
+        transform.GetChild(index).GetChild(0).gameObject.GetComponent<Renderer>().material.SetColor("_Color", transparentBlue);
     }
 
 }

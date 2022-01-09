@@ -1,0 +1,6 @@
+<TourSelectionRow xmlns="MarkLight">
+  <Column Id="col1"></Column>
+  <Column Id="col2"></Column>
+  <Column Id="col3"></Column>
+  <Column Id="col4"></Column>
+</TourSelectionRow>
